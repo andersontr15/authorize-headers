@@ -6,6 +6,7 @@ Simple express middleware to verify if a jsonwebtoken is valid.
 To use in Node:
 
 ```js
+var express = require('express');
 var authorizeHeaders = require('authorize-headers');
 var app = express();
 app.get('/', authorizeHeaders, function(request, response) {
