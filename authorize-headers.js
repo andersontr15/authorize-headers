@@ -1,5 +1,5 @@
 var jwt = require('jsonwebtoken');
-var isAuthorized = function(request, response, next) {
+var authorizeHeaders = function(request, response, next) {
 	if(request.headers.authorization) {
 		var token = request.headers.authorization.split(' ')[1];
 		jwt.verify(token, process.env.secret, function(err, decoded) {
@@ -8,7 +8,10 @@ var isAuthorized = function(request, response, next) {
 			}
 			next();
 		});
-	};
+	}
+	else {
+		return response.status(400).send('No token provided!');
+	}
 };
 
-module.exports = isAuthorized;
+module.exports = authorizeHeaders;

@@ -1,6 +1,6 @@
 var port = process.env.PORT || 3000;
 var express = require('express');
-var authorize = require('../authorize-headers');
+var authorizeHeaders = require('../authorize-headers');
 var jwt = require('jsonwebtoken');
 
 process.env.secret = 'test';
@@ -13,7 +13,7 @@ app.use(function(request, response, next){
 	request.headers.authorization = "Bearer " + token;
 	next();
 })
-app.get('/', authorize, function(request, response) {
+app.get('/', authorizeHeaders, function(request, response) {
 	response.status(200).send('Authorized token');
 })
 
