@@ -15,8 +15,10 @@ app.use(function(request, response, next){
 })
 app.get('/', authorizeHeaders, function(request, response) {
 	response.status(200).send('Authorized token');
-})
+});
 
 app.listen(port, function() {
 	console.log('Listening on port ' + port);
 });
+
+module.exports = app;
