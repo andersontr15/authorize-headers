@@ -1,0 +1,19 @@
+{
+  "name": "authorize-headers.js",
+  "version": "1.0.0",
+  "description": "Simple Express middleware to verify a jsonwebtoken",
+  "main": "authorize-headers.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [],
+  "author": "Theo <theoanderson3@gmail.com> (linkedin.com/in/andersontr15)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.2.1"
+  }
+}
