@@ -13,7 +13,6 @@ app.get('/', authorizeHeaders, function(request, response) {
 	// Otherwise middleware will return a 400
 });
 
-
 ```
 
-- Built by Theodore Anderson
+Built by Theodore Anderson

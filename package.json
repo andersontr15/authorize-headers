@@ -1,7 +1,7 @@
 {
   "name": "authorize-headers.js",
   "version": "1.0.0",
-  "description": "Simple Express middleware to verify a jsonwebtoken",
+  "description": "Simple Express middleware to verify if a jsonwebtoken is valid",
   "main": "authorize-headers.js",
   "directories": {
     "test": "test"
